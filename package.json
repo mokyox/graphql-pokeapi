@@ -2,7 +2,7 @@
   "name": "apollo-graphql-pokeapi",
   "version": "1.0.0",
   "description": "An GraphQL implementation of the PokeAPI using Apollo-GraphQL.",
-  "main": "./src/index.ts",
+  "main": "./src/app.ts",
   "repository": "https://github/mokyox/apollo-graphql-pokeapi.git",
   "author": "Mo Jama <23492964+mokyox@users.noreply.github.com>",
   "license": "MIT",

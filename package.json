@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "start": "ts-node ./src/app.ts",
+    "build": "tsc",
+    "start": "node ./dist/app.js",
     "format": "prettier --write './src/**/*.ts'",
     "lint": "eslint './src/**/*.ts'",
     "codegen": "graphql-codegen --config codegen.yml"

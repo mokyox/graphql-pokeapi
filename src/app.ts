@@ -3,7 +3,12 @@ import { ApolloServer } from "apollo-server-express";
 import { typeDefs } from "../src/graphql/schema/";
 import { resolvers } from "../src/graphql/resolvers/";
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  introspection: true,
+  playground: true,
+});
 
 const port = process.env.PORT || 4000;
 const app = express();

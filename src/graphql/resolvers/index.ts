@@ -1,15 +1,19 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import fetch from "node-fetch";
 import { Pokemon, Description } from "../../types/types";
 
 export const resolvers = {
   Query: {
     //Todo: Find/resolve issue for type definition for parent
-    getPokemon: async (_: any, { id }: { id: number }): Promise<Pokemon> => {
+    getPokemon: async (
+      _: unknown,
+      { id }: { id: number }
+    ): Promise<Pokemon> => {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       return response.json();
     },
     getDescription: async (
-      _: any,
+      _: unknown,
       { id }: { id: number }
     ): Promise<Description> => {
       const response = await fetch(

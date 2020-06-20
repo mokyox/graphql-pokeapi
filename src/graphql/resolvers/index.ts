@@ -24,7 +24,8 @@ export const resolvers = {
         return data.flavor_text_entries.find((text: Description) => {
           return (
             text.language.name === "en" &&
-            text.version.name === "alpha-sapphire"
+            (text.version.name === "ultra-sun" ||
+              text.version.name === "alpha-sapphire")
           );
         });
       });

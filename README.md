@@ -40,6 +40,6 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
 
 **Notes**:
 
-- `getDescription` returns Pokedex entries for Pokemon: Alpha Sapphire as the PokeAPI does not yet have Pokedex description data for Generation VII and above.
+- `getDescription` returns Pokedex entries from Pokemon: Alpha Sapphire for Generation I ~ VI Pokemon and Pokemon: Ultra Sun entries for Generation VII Pokemon. The PokeAPI does not yet have Pokedex description data for Generation VIII and above - I will update when this happens. See GitHub issue [here](https://github.com/PokeAPI/pokeapi/issues/460).
 
 - This Graph API only contains a few data fields that I plan on consuming myself for a project. Feel free to contribute to adding extra fields by adding an issue or PR.

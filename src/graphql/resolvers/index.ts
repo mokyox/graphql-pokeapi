@@ -1,9 +1,8 @@
 import fetch from "node-fetch";
-import { Pokemon, Description } from "../../types/types";
+import { Resolvers, Description, Pokemon } from "../../types/resolvers-types";
 
-export const resolvers = {
+export const resolvers: Resolvers = {
   Query: {
-    //Todo: Find/resolve issue for type definition for parent
     getPokemon: async (
       _: unknown,
       { id }: { id: number }

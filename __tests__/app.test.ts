@@ -1,8 +1,11 @@
 import supertest from "supertest";
+import { App } from "../src/app";
 
 describe("app", () => {
-  it("Returns 200 when requesting app", async () => {
-    const request = await supertest("http://localhost:4000/graphql");
-    request.post("/graphql").expect(200);
+  const app = App();
+  const request = supertest(app.listen(3000));
+  it("Returns user with id = 10", async () => {
+    console.log(request);
+    await request.get(" http://localhost:3000/graphql").expect(200);
   });
 });

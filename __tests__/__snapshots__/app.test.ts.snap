@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should return an object that matches Bulbasaur's data 1`] = `
+Object {
+  "data": Object {
+    "getDescription": Object {
+      "flavor_text": "Bulbasaur can be seen napping in bright sunlight.
+There is a seed on its back. By soaking up the sun’s rays,
+the seed grows progressively larger.",
+      "language": Object {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/",
+      },
+      "version": Object {
+        "name": "alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version/26/",
+      },
+    },
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "ability": Object {
+            "name": "overgrow",
+            "url": "https://pokeapi.co/api/v2/ability/65/",
+          },
+          "is_hidden": false,
+        },
+        Object {
+          "ability": Object {
+            "name": "chlorophyll",
+            "url": "https://pokeapi.co/api/v2/ability/34/",
+          },
+          "is_hidden": true,
+        },
+      ],
+      "id": 1,
+      "name": "bulbasaur",
+      "stats": Array [
+        Object {
+          "base_stat": 45,
+          "stat": Object {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/",
+          },
+        },
+        Object {
+          "base_stat": 49,
+          "stat": Object {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/",
+          },
+        },
+        Object {
+          "base_stat": 49,
+          "stat": Object {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/",
+          },
+        },
+        Object {
+          "base_stat": 65,
+          "stat": Object {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/",
+          },
+        },
+        Object {
+          "base_stat": 65,
+          "stat": Object {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/",
+          },
+        },
+        Object {
+          "base_stat": 45,
+          "stat": Object {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

@@ -13,14 +13,12 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
       is_hidden
       ability {
         name
-        url
       }
     }
     stats {
       base_stat
       stat {
         name
-        url
       }
     }
   }
@@ -28,11 +26,83 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
     flavor_text
     language {
       name
-      url
     }
     version {
       name
-      url
+    }
+  }
+}
+```
+
+### Sample Result
+
+```
+{
+  "data": {
+    "getPokemon": {
+      "id": 249,
+      "name": "lugia",
+      "abilities": [
+        {
+          "is_hidden": false,
+          "ability": {
+            "name": "pressure"
+          }
+        },
+        {
+          "is_hidden": true,
+          "ability": {
+            "name": "multiscale"
+          }
+        }
+      ],
+      "stats": [
+        {
+          "base_stat": 106,
+          "stat": {
+            "name": "hp"
+          }
+        },
+        {
+          "base_stat": 90,
+          "stat": {
+            "name": "attack"
+          }
+        },
+        {
+          "base_stat": 130,
+          "stat": {
+            "name": "defense"
+          }
+        },
+        {
+          "base_stat": 90,
+          "stat": {
+            "name": "special-attack"
+          }
+        },
+        {
+          "base_stat": 154,
+          "stat": {
+            "name": "special-defense"
+          }
+        },
+        {
+          "base_stat": 110,
+          "stat": {
+            "name": "speed"
+          }
+        }
+      ]
+    },
+    "getDescription": {
+      "flavor_text": "Lugia’s wings pack devastating power—a light fluttering of its\nwings can blow apart regular houses. As a result, this\nPokémon chooses to live out of sight deep under the sea.",
+      "language": {
+        "name": "en"
+      },
+      "version": {
+        "name": "alpha-sapphire"
+      }
     }
   }
 }

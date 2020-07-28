@@ -1,7 +1,7 @@
 overwrite: true
 schema: "src/graphql/schema/index.ts"
 generates:
-  src/types/resolvers-types.ts:
+  src/types/resolvers.ts:
     plugins:
       - add: "/* eslint-disable */"
       - add: "// @ts-nocheck "

@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { Resolvers, Description, Pokemon } from "../../types/resolvers-types";
+import { Resolvers, Description, Pokemon } from "../../types/resolvers";
 
 export const resolvers: Resolvers = {
   Query: {

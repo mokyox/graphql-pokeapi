@@ -20,10 +20,10 @@ export const resolvers: Resolvers = {
 
       return response.json().then((data) => {
         return data.flavor_text_entries.find((text: Description) => {
+          const { version, language } = text;
           return (
-            text.language.name === "en" &&
-            (text.version.name === "ultra-sun" ||
-              text.version.name === "alpha-sapphire")
+            language.name === "en" &&
+            (version.name === "sword" || version.name === "alpha-sapphire")
           );
         });
       });

@@ -90,3 +90,178 @@ the seed grows progressively larger.",
   },
 }
 `;
+
+exports[`app should return an object that matches Dartrix's data 1`] = `
+Object {
+  "data": Object {
+    "getDescription": Object {
+      "flavor_text": "It throws one knifelike feather after another at its
+enemies, and each one precisely strikes a weak
+point. These feathers are known as blade quills.",
+      "language": Object {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/",
+      },
+      "version": Object {
+        "name": "sword",
+        "url": "https://pokeapi.co/api/v2/version/33/",
+      },
+    },
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "ability": Object {
+            "name": "overgrow",
+            "url": "https://pokeapi.co/api/v2/ability/65/",
+          },
+          "is_hidden": false,
+        },
+        Object {
+          "ability": Object {
+            "name": "long-reach",
+            "url": "https://pokeapi.co/api/v2/ability/203/",
+          },
+          "is_hidden": true,
+        },
+      ],
+      "id": 723,
+      "name": "dartrix",
+      "stats": Array [
+        Object {
+          "base_stat": 78,
+          "stat": Object {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/",
+          },
+        },
+        Object {
+          "base_stat": 75,
+          "stat": Object {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/",
+          },
+        },
+        Object {
+          "base_stat": 75,
+          "stat": Object {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/",
+          },
+        },
+        Object {
+          "base_stat": 70,
+          "stat": Object {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/",
+          },
+        },
+        Object {
+          "base_stat": 70,
+          "stat": Object {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/",
+          },
+        },
+        Object {
+          "base_stat": 52,
+          "stat": Object {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`app should return an object that matches Zacian's data 1`] = `
+Object {
+  "data": Object {
+    "getDescription": Object {
+      "flavor_text": "Known as a legendary hero, this Pokémon
+absorbs metal particles, transforming them
+into a weapon it uses to battle.",
+      "language": Object {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/",
+      },
+      "version": Object {
+        "name": "sword",
+        "url": "https://pokeapi.co/api/v2/version/33/",
+      },
+    },
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "ability": Object {
+            "name": "intrepid-sword",
+            "url": "https://pokeapi.co/api/v2/ability/234/",
+          },
+          "is_hidden": false,
+        },
+      ],
+      "id": 888,
+      "name": "zacian-hero",
+      "stats": Array [
+        Object {
+          "base_stat": 92,
+          "stat": Object {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/",
+          },
+        },
+        Object {
+          "base_stat": 130,
+          "stat": Object {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/",
+          },
+        },
+        Object {
+          "base_stat": 115,
+          "stat": Object {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/",
+          },
+        },
+        Object {
+          "base_stat": 80,
+          "stat": Object {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/",
+          },
+        },
+        Object {
+          "base_stat": 115,
+          "stat": Object {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/",
+          },
+        },
+        Object {
+          "base_stat": 138,
+          "stat": Object {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

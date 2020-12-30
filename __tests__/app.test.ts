@@ -36,15 +36,28 @@ const testCase = {
       }
     }
     `,
-  variables: {
-    id: 1,
-  },
 };
 describe("app", () => {
   it("should return an object that matches Bulbasaur's data", async () => {
     const response = await query({
       query: testCase.query,
-      variables: testCase.variables || {},
+      variables: { id: 1 } || {},
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+  it("should return an object that matches Dartrix's data", async () => {
+    const response = await query({
+      query: testCase.query,
+      variables: { id: 723 } || {},
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+  it("should return an object that matches Zacian's data", async () => {
+    const response = await query({
+      query: testCase.query,
+      variables: { id: 888 } || {},
     });
 
     expect(response).toMatchSnapshot();

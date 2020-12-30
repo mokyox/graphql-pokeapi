@@ -10,7 +10,7 @@
     "dev": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "node ./dist/src/index.js",
-    "format": "prettier --write './src/**/*.ts'",
+    "format": "prettier --write .",
     "lint": "eslint './src/**/*.ts'",
     "codegen": "graphql-codegen --config codegen.yml",
     "test": "jest"
@@ -28,7 +28,7 @@
     "@graphql-codegen/add": "^2.0.2",
     "@graphql-codegen/cli": "1.20.0",
     "@graphql-codegen/introspection": "1.18.1",
-    "@graphql-codegen/typescript": "1.19.0",
+    "@graphql-codegen/typescript": "1.20.0",
     "@graphql-codegen/typescript-document-nodes": "1.17.9",
     "@graphql-codegen/typescript-graphql-files-modules": "1.18.1",
     "@graphql-codegen/typescript-operations": "1.17.13",

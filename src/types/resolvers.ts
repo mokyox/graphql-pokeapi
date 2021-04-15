@@ -23,6 +23,40 @@ export type Scalars = {
   Float: number;
 };
 
+export type Ability = {
+  __typename?: "Ability";
+  name?: Maybe<Scalars["String"]>;
+  url?: Maybe<Scalars["String"]>;
+};
+
+export type AbilityData = {
+  __typename?: "AbilityData";
+  ability?: Maybe<Ability>;
+  is_hidden: Scalars["Boolean"];
+};
+
+export type Description = {
+  __typename?: "Description";
+  flavor_text?: Maybe<Scalars["String"]>;
+  language?: Maybe<LanguageData>;
+  version?: Maybe<VersionData>;
+};
+
+export type LanguageData = {
+  __typename?: "LanguageData";
+  name?: Maybe<Scalars["String"]>;
+  url?: Maybe<Scalars["String"]>;
+};
+
+export type Pokemon = {
+  __typename?: "Pokemon";
+  id?: Maybe<Scalars["Int"]>;
+  name?: Maybe<Scalars["String"]>;
+  abilities?: Maybe<Array<Maybe<AbilityData>>>;
+  stats?: Maybe<Array<Maybe<StatsData>>>;
+  description?: Maybe<Array<Maybe<Description>>>;
+};
+
 export type Query = {
   __typename?: "Query";
   getPokemon?: Maybe<Pokemon>;
@@ -37,27 +71,6 @@ export type QueryGetDescriptionArgs = {
   id: Scalars["Int"];
 };
 
-export type Pokemon = {
-  __typename?: "Pokemon";
-  id?: Maybe<Scalars["Int"]>;
-  name?: Maybe<Scalars["String"]>;
-  abilities?: Maybe<Array<Maybe<AbilityData>>>;
-  stats?: Maybe<Array<Maybe<StatsData>>>;
-  description?: Maybe<Array<Maybe<Description>>>;
-};
-
-export type Ability = {
-  __typename?: "Ability";
-  name?: Maybe<Scalars["String"]>;
-  url?: Maybe<Scalars["String"]>;
-};
-
-export type AbilityData = {
-  __typename?: "AbilityData";
-  ability?: Maybe<Ability>;
-  is_hidden: Scalars["Boolean"];
-};
-
 export type Stats = {
   __typename?: "Stats";
   name?: Maybe<Scalars["String"]>;
@@ -68,19 +81,6 @@ export type StatsData = {
   __typename?: "StatsData";
   stat?: Maybe<Stats>;
   base_stat?: Maybe<Scalars["Int"]>;
-};
-
-export type Description = {
-  __typename?: "Description";
-  flavor_text?: Maybe<Scalars["String"]>;
-  language?: Maybe<LanguageData>;
-  version?: Maybe<VersionData>;
-};
-
-export type LanguageData = {
-  __typename?: "LanguageData";
-  name?: Maybe<Scalars["String"]>;
-  url?: Maybe<Scalars["String"]>;
 };
 
 export type VersionData = {
@@ -208,76 +208,34 @@ export type DirectiveResolverFn<
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
-  Query: ResolverTypeWrapper<{}>;
-  Int: ResolverTypeWrapper<Scalars["Int"]>;
-  Pokemon: ResolverTypeWrapper<Pokemon>;
-  String: ResolverTypeWrapper<Scalars["String"]>;
   Ability: ResolverTypeWrapper<Ability>;
+  String: ResolverTypeWrapper<Scalars["String"]>;
   AbilityData: ResolverTypeWrapper<AbilityData>;
   Boolean: ResolverTypeWrapper<Scalars["Boolean"]>;
-  Stats: ResolverTypeWrapper<Stats>;
-  StatsData: ResolverTypeWrapper<StatsData>;
   Description: ResolverTypeWrapper<Description>;
   LanguageData: ResolverTypeWrapper<LanguageData>;
+  Pokemon: ResolverTypeWrapper<Pokemon>;
+  Int: ResolverTypeWrapper<Scalars["Int"]>;
+  Query: ResolverTypeWrapper<{}>;
+  Stats: ResolverTypeWrapper<Stats>;
+  StatsData: ResolverTypeWrapper<StatsData>;
   VersionData: ResolverTypeWrapper<VersionData>;
 }>;
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = ResolversObject<{
-  Query: {};
-  Int: Scalars["Int"];
-  Pokemon: Pokemon;
-  String: Scalars["String"];
   Ability: Ability;
+  String: Scalars["String"];
   AbilityData: AbilityData;
   Boolean: Scalars["Boolean"];
-  Stats: Stats;
-  StatsData: StatsData;
   Description: Description;
   LanguageData: LanguageData;
+  Pokemon: Pokemon;
+  Int: Scalars["Int"];
+  Query: {};
+  Stats: Stats;
+  StatsData: StatsData;
   VersionData: VersionData;
-}>;
-
-export type QueryResolvers<
-  ContextType = any,
-  ParentType extends ResolversParentTypes["Query"] = ResolversParentTypes["Query"]
-> = ResolversObject<{
-  getPokemon?: Resolver<
-    Maybe<ResolversTypes["Pokemon"]>,
-    ParentType,
-    ContextType,
-    RequireFields<QueryGetPokemonArgs, "id">
-  >;
-  getDescription?: Resolver<
-    Maybe<ResolversTypes["Description"]>,
-    ParentType,
-    ContextType,
-    RequireFields<QueryGetDescriptionArgs, "id">
-  >;
-}>;
-
-export type PokemonResolvers<
-  ContextType = any,
-  ParentType extends ResolversParentTypes["Pokemon"] = ResolversParentTypes["Pokemon"]
-> = ResolversObject<{
-  id?: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
-  abilities?: Resolver<
-    Maybe<Array<Maybe<ResolversTypes["AbilityData"]>>>,
-    ParentType,
-    ContextType
-  >;
-  stats?: Resolver<
-    Maybe<Array<Maybe<ResolversTypes["StatsData"]>>>,
-    ParentType,
-    ContextType
-  >;
-  description?: Resolver<
-    Maybe<Array<Maybe<ResolversTypes["Description"]>>>,
-    ParentType,
-    ContextType
-  >;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type AbilityResolvers<
@@ -295,24 +253,6 @@ export type AbilityDataResolvers<
 > = ResolversObject<{
   ability?: Resolver<Maybe<ResolversTypes["Ability"]>, ParentType, ContextType>;
   is_hidden?: Resolver<ResolversTypes["Boolean"], ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
-
-export type StatsResolvers<
-  ContextType = any,
-  ParentType extends ResolversParentTypes["Stats"] = ResolversParentTypes["Stats"]
-> = ResolversObject<{
-  name?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
-  url?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
-
-export type StatsDataResolvers<
-  ContextType = any,
-  ParentType extends ResolversParentTypes["StatsData"] = ResolversParentTypes["StatsData"]
-> = ResolversObject<{
-  stat?: Resolver<Maybe<ResolversTypes["Stats"]>, ParentType, ContextType>;
-  base_stat?: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -347,6 +287,66 @@ export type LanguageDataResolvers<
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
+export type PokemonResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes["Pokemon"] = ResolversParentTypes["Pokemon"]
+> = ResolversObject<{
+  id?: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  name?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  abilities?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes["AbilityData"]>>>,
+    ParentType,
+    ContextType
+  >;
+  stats?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes["StatsData"]>>>,
+    ParentType,
+    ContextType
+  >;
+  description?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes["Description"]>>>,
+    ParentType,
+    ContextType
+  >;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type QueryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes["Query"] = ResolversParentTypes["Query"]
+> = ResolversObject<{
+  getPokemon?: Resolver<
+    Maybe<ResolversTypes["Pokemon"]>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryGetPokemonArgs, "id">
+  >;
+  getDescription?: Resolver<
+    Maybe<ResolversTypes["Description"]>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryGetDescriptionArgs, "id">
+  >;
+}>;
+
+export type StatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes["Stats"] = ResolversParentTypes["Stats"]
+> = ResolversObject<{
+  name?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  url?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type StatsDataResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes["StatsData"] = ResolversParentTypes["StatsData"]
+> = ResolversObject<{
+  stat?: Resolver<Maybe<ResolversTypes["Stats"]>, ParentType, ContextType>;
+  base_stat?: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
 export type VersionDataResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["VersionData"] = ResolversParentTypes["VersionData"]
@@ -357,14 +357,14 @@ export type VersionDataResolvers<
 }>;
 
 export type Resolvers<ContextType = any> = ResolversObject<{
-  Query?: QueryResolvers<ContextType>;
-  Pokemon?: PokemonResolvers<ContextType>;
   Ability?: AbilityResolvers<ContextType>;
   AbilityData?: AbilityDataResolvers<ContextType>;
-  Stats?: StatsResolvers<ContextType>;
-  StatsData?: StatsDataResolvers<ContextType>;
   Description?: DescriptionResolvers<ContextType>;
   LanguageData?: LanguageDataResolvers<ContextType>;
+  Pokemon?: PokemonResolvers<ContextType>;
+  Query?: QueryResolvers<ContextType>;
+  Stats?: StatsResolvers<ContextType>;
+  StatsData?: StatsDataResolvers<ContextType>;
   VersionData?: VersionDataResolvers<ContextType>;
 }>;
 

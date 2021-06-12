@@ -1,6 +1,6 @@
 # apollo-graphql-pokeapi
 
-An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
+An GraphQL implementation of the PokeAPI using Apollo-GraphQL (version for code-talk)
 
 ### Sample Query
 
@@ -9,12 +9,6 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
   getPokemon(id: 249) {
     id
     name
-    abilities {
-      is_hidden
-      ability {
-        name
-      }
-    }
     stats {
       base_stat
       stat {
@@ -22,16 +16,8 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
       }
     }
   }
-  getDescription(id: 249) {
-    flavor_text
-    language {
-      name
-    }
-    version {
-      name
-    }
-  }
 }
+
 ```
 
 ### Sample Result
@@ -42,20 +28,6 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
     "getPokemon": {
       "id": 249,
       "name": "lugia",
-      "abilities": [
-        {
-          "is_hidden": false,
-          "ability": {
-            "name": "pressure"
-          }
-        },
-        {
-          "is_hidden": true,
-          "ability": {
-            "name": "multiscale"
-          }
-        }
-      ],
       "stats": [
         {
           "base_stat": 106,
@@ -94,22 +66,7 @@ An GraphQL implementation of the PokeAPI using Apollo-GraphQL.
           }
         }
       ]
-    },
-    "getDescription": {
-      "flavor_text": "Lugia’s wings pack devastating power—a light fluttering of its\nwings can blow apart regular houses. As a result, this\nPokémon chooses to live out of sight deep under the sea.",
-      "language": {
-        "name": "en"
-      },
-      "version": {
-        "name": "alpha-sapphire"
-      }
     }
   }
 }
 ```
-
-**Notes**:
-
-- PokeAPI is missing Pokedex entries for some generation 2 and 3 Pokemon. Therefore `getDescription` returns Pokedex entries from _Pokemon: Alpha Sapphire_ for Generation I ~ VI Pokemon and _Pokemon: Sword_ entries for Generation VII and Generation VIII Pokemon.
-
-- This Graph API only contains a few data fields that I plan on consuming myself for a project. Feel free to contribute to adding extra fields by adding an issue or PR.

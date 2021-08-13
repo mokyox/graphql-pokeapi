@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "lint": "eslint './src/**/*.ts'",
     "codegen": "graphql-codegen --config codegen.yml",
+    "codegen:watch": "graphql-codegen --config codegen.yml --watch",
     "test": "jest"
   },
   "dependencies": {

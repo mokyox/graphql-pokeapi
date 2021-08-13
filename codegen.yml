@@ -14,5 +14,3 @@ generates:
     hooks:
       afterOneFileWrite:
         - prettier --write
-    config:
-      useIndexSignature: true # Necessary for Apollo-Server

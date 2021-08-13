@@ -88,9 +88,6 @@ export type VersionData = {
   url: Scalars["String"];
 };
 
-export type WithIndex<TObject> = TObject & Record<string, any>;
-export type ResolversObject<TObject> = WithIndex<TObject>;
-
 export type ResolverTypeWrapper<T> = Promise<T> | T;
 
 export type ResolverWithResolve<TResult, TParent, TContext, TArgs> = {
@@ -197,7 +194,7 @@ export type DirectiveResolverFn<
 ) => TResult | Promise<TResult>;
 
 /** Mapping between all available schema types and the resolvers types */
-export type ResolversTypes = ResolversObject<{
+export type ResolversTypes = {
   Ability: ResolverTypeWrapper<Ability>;
   String: ResolverTypeWrapper<Scalars["String"]>;
   AbilityData: ResolverTypeWrapper<AbilityData>;
@@ -210,10 +207,10 @@ export type ResolversTypes = ResolversObject<{
   StatsData: ResolverTypeWrapper<StatsData>;
   VersionData: ResolverTypeWrapper<VersionData>;
   Boolean: ResolverTypeWrapper<Scalars["Boolean"]>;
-}>;
+};
 
 /** Mapping between all available schema types and the resolvers parents */
-export type ResolversParentTypes = ResolversObject<{
+export type ResolversParentTypes = {
   Ability: Ability;
   String: Scalars["String"];
   AbilityData: AbilityData;
@@ -226,48 +223,48 @@ export type ResolversParentTypes = ResolversObject<{
   StatsData: StatsData;
   VersionData: VersionData;
   Boolean: Scalars["Boolean"];
-}>;
+};
 
 export type AbilityResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Ability"] = ResolversParentTypes["Ability"]
-> = ResolversObject<{
+> = {
   name?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   url?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type AbilityDataResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["AbilityData"] = ResolversParentTypes["AbilityData"]
-> = ResolversObject<{
+> = {
   ability?: Resolver<Maybe<ResolversTypes["Ability"]>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type DescriptionResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Description"] = ResolversParentTypes["Description"]
-> = ResolversObject<{
+> = {
   flavor_text?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   language?: Resolver<ResolversTypes["LanguageData"], ParentType, ContextType>;
   version?: Resolver<ResolversTypes["VersionData"], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type LanguageDataResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["LanguageData"] = ResolversParentTypes["LanguageData"]
-> = ResolversObject<{
+> = {
   name?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   url?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type PokemonResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Pokemon"] = ResolversParentTypes["Pokemon"]
-> = ResolversObject<{
+> = {
   id?: Resolver<ResolversTypes["Int"], ParentType, ContextType>;
   name?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   abilities?: Resolver<
@@ -286,12 +283,12 @@ export type PokemonResolvers<
     ContextType
   >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type QueryResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Query"] = ResolversParentTypes["Query"]
-> = ResolversObject<{
+> = {
   getPokemon?: Resolver<
     Maybe<ResolversTypes["Pokemon"]>,
     ParentType,
@@ -304,36 +301,36 @@ export type QueryResolvers<
     ContextType,
     RequireFields<QueryGetDescriptionArgs, "id">
   >;
-}>;
+};
 
 export type StatsResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Stats"] = ResolversParentTypes["Stats"]
-> = ResolversObject<{
+> = {
   name?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   url?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type StatsDataResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["StatsData"] = ResolversParentTypes["StatsData"]
-> = ResolversObject<{
+> = {
   stat?: Resolver<ResolversTypes["Stats"], ParentType, ContextType>;
   base_stat?: Resolver<ResolversTypes["Int"], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
 export type VersionDataResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["VersionData"] = ResolversParentTypes["VersionData"]
-> = ResolversObject<{
+> = {
   name?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   url?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
+};
 
-export type Resolvers<ContextType = any> = ResolversObject<{
+export type Resolvers<ContextType = any> = {
   Ability?: AbilityResolvers<ContextType>;
   AbilityData?: AbilityDataResolvers<ContextType>;
   Description?: DescriptionResolvers<ContextType>;
@@ -343,4 +340,4 @@ export type Resolvers<ContextType = any> = ResolversObject<{
   Stats?: StatsResolvers<ContextType>;
   StatsData?: StatsDataResolvers<ContextType>;
   VersionData?: VersionDataResolvers<ContextType>;
-}>;
+};

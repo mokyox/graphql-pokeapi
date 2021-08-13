@@ -9,7 +9,6 @@ const testCase = {
         id
         name
         abilities {
-          is_hidden
           ability {
             name
             url
@@ -46,6 +45,34 @@ describe("app", () => {
 
     expect(response).toMatchSnapshot();
   });
+
+  it("should return an object that matches Starmie's data", async () => {
+    const response = await query({
+      query: testCase.query,
+      variables: { id: 121 } || {},
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  it("should return an object that matches Lugia's data", async () => {
+    const response = await query({
+      query: testCase.query,
+      variables: { id: 249 } || {},
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  it("should return an object that matches Altaria's data", async () => {
+    const response = await query({
+      query: testCase.query,
+      variables: { id: 334 } || {},
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
   it("should return an object that matches Dartrix's data", async () => {
     const response = await query({
       query: testCase.query,

@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`app should return an object that matches Bulbasaur's data 1`] = `
+exports[`app should return an object that matches Altaria's data 1`] = `
 Object {
   "data": Object {
     "getDescription": Object {
-      "flavor_text": "Bulbasaur can be seen napping in bright sunlight.
-There is a seed on its back. By soaking up the sun’s rays,
-the seed grows progressively larger.",
+      "flavor_text": "Altaria sings in a gorgeous soprano. Its wings are like cotton
+clouds. This Pokémon catches updrafts with its buoyant wings
+and soars way up into the wild blue yonder.",
       "language": Object {
         "name": "en",
         "url": "https://pokeapi.co/api/v2/language/9/",
@@ -20,17 +20,104 @@ the seed grows progressively larger.",
       "abilities": Array [
         Object {
           "ability": Object {
+            "name": "natural-cure",
+            "url": "https://pokeapi.co/api/v2/ability/30/",
+          },
+        },
+        Object {
+          "ability": Object {
+            "name": "cloud-nine",
+            "url": "https://pokeapi.co/api/v2/ability/13/",
+          },
+        },
+      ],
+      "id": 334,
+      "name": "altaria",
+      "stats": Array [
+        Object {
+          "base_stat": 75,
+          "stat": Object {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/",
+          },
+        },
+        Object {
+          "base_stat": 70,
+          "stat": Object {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/",
+          },
+        },
+        Object {
+          "base_stat": 90,
+          "stat": Object {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/",
+          },
+        },
+        Object {
+          "base_stat": 70,
+          "stat": Object {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/",
+          },
+        },
+        Object {
+          "base_stat": 105,
+          "stat": Object {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/",
+          },
+        },
+        Object {
+          "base_stat": 80,
+          "stat": Object {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`app should return an object that matches Bulbasaur's data 1`] = `
+Object {
+  "data": Object {
+    "getDescription": Object {
+      "flavor_text": "There is a plant seed on its back right from the
+day this Pokémon is born. The seed slowly
+grows larger.",
+      "language": Object {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/",
+      },
+      "version": Object {
+        "name": "sword",
+        "url": "https://pokeapi.co/api/v2/version/33/",
+      },
+    },
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "ability": Object {
             "name": "overgrow",
             "url": "https://pokeapi.co/api/v2/ability/65/",
           },
-          "is_hidden": false,
         },
         Object {
           "ability": Object {
             "name": "chlorophyll",
             "url": "https://pokeapi.co/api/v2/ability/34/",
           },
-          "is_hidden": true,
         },
       ],
       "id": 1,
@@ -114,14 +201,12 @@ point. These feathers are known as blade quills.",
             "name": "overgrow",
             "url": "https://pokeapi.co/api/v2/ability/65/",
           },
-          "is_hidden": false,
         },
         Object {
           "ability": Object {
             "name": "long-reach",
             "url": "https://pokeapi.co/api/v2/ability/203/",
           },
-          "is_hidden": true,
         },
       ],
       "id": 723,
@@ -182,13 +267,197 @@ point. These feathers are known as blade quills.",
 }
 `;
 
+exports[`app should return an object that matches Lugia's data 1`] = `
+Object {
+  "data": Object {
+    "getDescription": Object {
+      "flavor_text": "Lugia’s wings pack devastating power—a light fluttering of its
+wings can blow apart regular houses. As a result, this
+Pokémon chooses to live out of sight deep under the sea.",
+      "language": Object {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/",
+      },
+      "version": Object {
+        "name": "alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version/26/",
+      },
+    },
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "ability": Object {
+            "name": "pressure",
+            "url": "https://pokeapi.co/api/v2/ability/46/",
+          },
+        },
+        Object {
+          "ability": Object {
+            "name": "multiscale",
+            "url": "https://pokeapi.co/api/v2/ability/136/",
+          },
+        },
+      ],
+      "id": 249,
+      "name": "lugia",
+      "stats": Array [
+        Object {
+          "base_stat": 106,
+          "stat": Object {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/",
+          },
+        },
+        Object {
+          "base_stat": 90,
+          "stat": Object {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/",
+          },
+        },
+        Object {
+          "base_stat": 130,
+          "stat": Object {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/",
+          },
+        },
+        Object {
+          "base_stat": 90,
+          "stat": Object {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/",
+          },
+        },
+        Object {
+          "base_stat": 154,
+          "stat": Object {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/",
+          },
+        },
+        Object {
+          "base_stat": 110,
+          "stat": Object {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`app should return an object that matches Starmie's data 1`] = `
+Object {
+  "data": Object {
+    "getDescription": Object {
+      "flavor_text": "This Pokémon has an organ known as its core.
+The organ glows in seven colors when Starmie is
+unleashing its potent psychic powers.",
+      "language": Object {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/",
+      },
+      "version": Object {
+        "name": "sword",
+        "url": "https://pokeapi.co/api/v2/version/33/",
+      },
+    },
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "ability": Object {
+            "name": "illuminate",
+            "url": "https://pokeapi.co/api/v2/ability/35/",
+          },
+        },
+        Object {
+          "ability": Object {
+            "name": "natural-cure",
+            "url": "https://pokeapi.co/api/v2/ability/30/",
+          },
+        },
+        Object {
+          "ability": Object {
+            "name": "analytic",
+            "url": "https://pokeapi.co/api/v2/ability/148/",
+          },
+        },
+      ],
+      "id": 121,
+      "name": "starmie",
+      "stats": Array [
+        Object {
+          "base_stat": 60,
+          "stat": Object {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/",
+          },
+        },
+        Object {
+          "base_stat": 75,
+          "stat": Object {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/",
+          },
+        },
+        Object {
+          "base_stat": 85,
+          "stat": Object {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/",
+          },
+        },
+        Object {
+          "base_stat": 100,
+          "stat": Object {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/",
+          },
+        },
+        Object {
+          "base_stat": 85,
+          "stat": Object {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/",
+          },
+        },
+        Object {
+          "base_stat": 115,
+          "stat": Object {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
 exports[`app should return an object that matches Zacian's data 1`] = `
 Object {
   "data": Object {
     "getDescription": Object {
-      "flavor_text": "Known as a legendary hero, this Pokémon
-absorbs metal particles, transforming them
-into a weapon it uses to battle.",
+      "flavor_text": "Now armed with a weapon it used in ancient
+times, this Pokémon needs only a single strike
+to fell even Gigantamax Pokémon.",
       "language": Object {
         "name": "en",
         "url": "https://pokeapi.co/api/v2/language/9/",
@@ -205,7 +474,6 @@ into a weapon it uses to battle.",
             "name": "intrepid-sword",
             "url": "https://pokeapi.co/api/v2/ability/234/",
           },
-          "is_hidden": false,
         },
       ],
       "id": 888,

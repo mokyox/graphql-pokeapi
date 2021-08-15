@@ -1,0 +1,26 @@
+query getPokemon($id: Int!) {
+  getPokemon(id: $id) {
+    id
+    name
+    abilities {
+      ability {
+        name
+      }
+    }
+    stats {
+      base_stat
+      stat {
+        name
+      }
+    }
+  }
+  getDescription(id: $id) {
+    flavor_text
+    language {
+      name
+    }
+    version {
+      name
+    }
+  }
+}

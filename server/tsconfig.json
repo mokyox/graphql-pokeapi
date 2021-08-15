@@ -16,6 +16,6 @@
       "#/*": ["src/*"]
     }
   },
-  "include": ["./src", "./__tests__"],
+  "include": ["./src", "server/__tests__"],
   "exclude": ["node_modules"]
 }

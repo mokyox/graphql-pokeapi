@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { Box, Spinner, Stack, Text, Image, Center } from "@chakra-ui/react";
-import { Fragment } from "react";
+import { useGetPokemonQuery } from "../generated/graphql";
 
 import { Hero } from "./Hero";
 
@@ -34,8 +34,8 @@ const GET_POKEMON = gql`
 `;
 
 export default function PokemonCard(): React.ReactElement {
-  const { loading, error, data } = useQuery(GET_POKEMON, {
-    variables: { id: 490 },
+  const { loading, error, data } = useGetPokemonQuery({
+    variables: { id: 700 },
   });
 
   if (loading)
